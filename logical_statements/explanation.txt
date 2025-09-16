@@ -1,0 +1,5 @@
+In this topic we will cover the following 
+a) If and if else statement
+b)else if statement
+c)conditional ternary Operators
+d) switch statement

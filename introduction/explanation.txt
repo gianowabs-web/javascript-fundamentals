@@ -1,0 +1,83 @@
+content tto cover
+> Variables
+> Primitive data type
+> Analyzing and modifying data types
+> Operators
+
+Variables
+> Variables are addresses or name value in your code that can represent different 
+values each time the code runs.
+Before we deal with variables we will look at
+
+i) Identifier
+_ An identifier is a name that users derive that is used to name concepts
+in programming language
+_in order t derive the name the following rules must be followed.
+a) An identifier can be a combination of letters (A-Z,a-z,0-9).
+  Exception
+  -you can't begin with a digit, digit should be placed at the end.
+  e.g. "9total' is wrong, instead say "total19".
+
+b) space between two words is not allowed, instead put underscore between the words.
+  -E.g.
+  "Total marks" is wrong instead you can say "total_marks"
+
+  Variable declaration
+  . a variable defination and declaration consist of three parts;
+    variable defining keywords
+      i)let 
+      This is used for variables and might have anew value assigned them
+      somewhere in the program.
+      -let has a block level scope, this bmeans that you can only the variables define with "let" in the specific block of codes 
+      in which they are defined.
+      - A block of code will always start with {and end with},which is how you recognise them.
+       Example:
+       let total =100;
+      ii) var 
+      this is used for variables that may have new value assigned them
+      somwwhere in the program.
+      Var has a global scope which means that you can use the variables defined
+      with var in the entire script.
+
+       Example:
+       var result = 150;
+    iii) const 
+    -it is used for variables that only get the value  assigned once for example the value 
+    of pi, which will not change.
+    -Example:
+      const average = 45;
+      average =50
+      -this will result in an error.
+
+Comment
+> Comment are used to explain what a program is all about.
+>any line of code starting with a comment symbol either single line or multiline comment
+is automatically is automatically ignored by the interpreter, and execution goes to the line.
+>Types  of comments
+  a) singleline comment //
+  Example: // single line  comment
+
+  b) Multiline comment
+  -This allows you right a multiple line sentences as comment.
+  Example: 
+       /*
+            this is a multiline
+            comment,
+        */
+        
+
+ii) Primitive datatypes
+-  javascript has seven primitive datatypes
+    string
+    -strinf is used to store a text value. It is a sequence of chracters 
+    there are different ways to declare a string.
+        a) double quote 
+        b)single quote 
+        c) backticks - special templates string in which you can use variables directly
+        
+    number
+    bigint
+    boolean
+    symbol
+    undefined
+    null

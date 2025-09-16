@@ -1,0 +1,52 @@
+Operators
+-they are used when you want to work with numbers, in doing
+calculations.
+-Operators are used to operate on values.
+
+Examples 
+  a) Arithmetric Operators
+  -Arithmetric Operatorscan be used to perform operations with numbers.
+  - they include:
+     addition +
+     subtraction -
+     Multiplication *
+     Division /
+     Exponent **
+     Modulus %
+     Unary Operators (increment ++, decrement --)
+     prefix and postfix Operators.
+b) Assignment Operators
+- assignment operator is used to assign values to a variable.
+- the character for basic assignment operation is "=".
+-Example
+    let t = 7;
+    - here assignment operartor "=" assings the values "7" to the variable "t".
+
+we have compound assignment operator that combine the assignment operator
+example:
+   addition assignment +=
+   subtraction assignment -=
+   Multiplication assignment *=
+   division assignment /=
+   modulus assignment %=
+   exponent assignment **= 
+
+c) comparison Operators
+- the outcome of comparison operators is usually boolean
+expression (true or false)
+-Example:
+    Equal ==
+    Not Equal !=
+    greater than >, greater than or equal to >=
+    less than <, less than or equal to <=
+
+d) logical operators
+- Used in situation you want to check two condition in one 
+or need to negate a condition, the logical operators come 
+in handy. 
+- You can use:
+     and -&&
+     or -||
+     not -!
+
+
