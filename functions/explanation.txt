@@ -1,0 +1,83 @@
+Topics;
+ > basic functions
+ > function arguments
+ > return
+ > Variable scope in functions
+ > recursive functions
+ > nested functions 
+ > anonymus functions
+ > Function callbacks
+
+
+ Basic functions
+ - we have built in functions that we have explored example
+  Prompt(), log(), push(), shift(), sort()
+  - these funtions are predefined in the javascript complier
+  - the function definations part is hidden from us we are 
+  only interacting with the fuction calling only.
+
+  user defined functions
+  -These are functions that we take part in creating both the function defination and the function calling.
+
+  function defination
+  fuction defination syntax
+  fuction nameOfTheFunction(){
+    // content of the function or body of the function
+  }
+  fuction defination starts with the keyword "function" followed by the function name, which must be
+  a valid identfier
+  after the function name we have a bracket () inside the bracket we can have parameters or not .
+  after bracket we have the opening curly bracket"{and the closing culy bracket}" inside them we the 
+  function block of code that is executed when the fuction is called
+  - a function defination cannot before until you perform a fuction callbacks
+   examples  of the function defination in the inside bracket 
+   fuction say hello ()
+   example of fuction with parameters
+   fuction hello (parameters1,parameters2){
+    // block of code goes here
+   }
+
+   what is parameters
+   parameter - is a variable that gets initalized with the value supplied as arguments during 
+   fuction calling
+   arguments - is a value supplied during fuction calling to initalize the parameter
+
+   function calling
+   - this calling the fuction that you have defined. there are several ways a fuction call is performed
+   - the fuction na,e used in the defination must be the same as name used in calling inconsistescy will result 
+   in syntax error
+   a) simple call
+       this is the situation where there is no parameter in the functon call in other words those function without parameters are termed
+       as void is called . here the fuction name is supplied with empty bracket
+
+       // fuction defination
+         fuction sayHello(){
+            console.log("Hello");
+         }
+
+       // fuction calling
+       sayHello(); .. just called the function directly
+
+
+    a) call by value
+      this is where you supply the values directly inside the brackets of a fuction call
+      //parameter function
+       function rectangle(length, width){
+        let area = length * width;
+        console.log(area);
+       }
+
+       // function calling
+       rectangle(67, 40);
+
+    b) call by reference 
+      // fuction defination
+       fuction rectangle(length, width){
+        let area = length * width;
+        console.log(area);
+
+       }
+       // funtion calling
+        let l = 80
+        let w = 45
+        rectangle(l, w) 
