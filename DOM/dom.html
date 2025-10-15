@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treasure</title>
+</head>
+<body>
+    <h1>let's find the treasure</h1>
+
+    <div id="forest">
+        <div id="tree1">
+            <div id="Squirrel"></div>
+            <div id="flower"></div>
+        </div>
+        <div id="tree2">
+            <div id="shrubbery">
+                <div id="treasure"></div>
+            </div>
+            <div id="mushroom">
+                <div id="bug"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        console.log(document.body.children.forest.children.tree2.children.shrubbery.children.treasure);
+        console.log(document.body.children.forest.children.tree1.children.flower);
+
+        //parent element
+        console.log(document.body.children.forest.children.tree1.parentElement);
+
+        // previous element
+        console.log(document.body.children.forest.children.tree2.previousElementSibling);
+
+        // next element
+        console.log(document.body.children.forest.children.tree1.nextElementSibling);
+
+    </script>
+</body>
+</html>

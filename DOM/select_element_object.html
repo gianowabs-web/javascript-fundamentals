@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select element as objects</title>
+</head>
+<body>
+    <!--
+    -->
+    <h1>Welcome page</h1>
+    <p id="greetings"> Hi!</p>
+    <div class="one">Hello</div>
+
+    <div>one</div>
+    <div id="one">two</div>
+    <div>three</div>
+    <script>
+        // changing the inner text - "innertext"
+        let h1 = document.querySelector("h1");
+        h1.textContent ="Hello World!";
+        
+            // ACCESSING ELEMENT BY ID
+            /*
+            we usually use - getElementById()
+            */
+        let greeting = document.getElementById("greetings");
+        greeting.innerHTML = "<b>Byte</b>";
+
+
+        let maths = Number(prompt("Enter marks for maths:"));
+        let sci = Number(prompt("Enter marks for sci:"));
+         
+        greetings.innerHTML= `<h1> Thetotal marks is ${maths+sci} </h1>`;
+           
+        // selcting element by tag name -getElementByTagName("div");
+
+        let result = document.getElementsByTagName("div").item(3);
+        result.innerHTML= '<b> div two </b>';
+
+        let r = document.getElementsByTagName("div").namedItem("one");
+        r.innerHTML = "<b>named</b>";
+
+        // accessing element by class name
+        document.getElementsByClassName("one");
+
+        /*
+        querySelector();
+        - select the first option that matches the query
+        querySelectorAll()
+        -select all the elements that matches the query.
+
+        */
+    </script>
+    
+</body>
+</html>

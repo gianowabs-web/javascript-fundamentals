@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggling</title>
+</head>
+<body>
+    <!--
+    classList.toggle()
+    in some case you would want to add a class when it doesn't already have that
+     particular class but removing it when it does. This is called toggling
+    -->
+     <script>
+        function changeVisibility(){
+            document.getElementById("shape").classList.toggle("red");
+        }
+     </script>
+     <style>
+        .hide{
+            display:none;
+
+        }
+        .square{
+            height: 300px;
+            width: 300px;
+
+        }
+        .green{
+            background-color: green;
+        }
+        .red{
+            background-color: red;
+        }
+     </style>
+     <div id="shape" class="square green"></div>
+
+     <button onclick="changeVisibility()">Magic!</button>
+</body>
+</html>

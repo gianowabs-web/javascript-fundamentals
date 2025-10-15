@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise9.3</title>
+</head>
+<body>
+    <!--
+    1. select the page element as a javascript object
+    2. update the text content properly of the selected page e;ement
+    3. using the classlist.add object method,a add class of red  to the element
+    4. update the id property of the element to tester
+    5. Through the style object add a bacgroundcolor property of red to the page
+    -->
+    <div class="output"></div>
+
+    <script>
+        // select the class name
+        let element = document.querySelector(".output");
+
+        // add the text
+        element.textContent="Hello world";
+
+        // add a new class called red
+        element.classList.add("red");
+
+        // update id
+        element.id ="tester";
+
+        // change the background color
+        element.style.backgroundColor ="red";
+
+        // to see classes and id added
+        console.log(element.id);
+        console.log(element.className);
+        console.log(element.classList); // see the classes as a list.
+
+        // getting the document url
+        let url= document.URL;
+        console.log(url);
+
+        element.textContent =url;
+    </script>
+</body>
+</html>

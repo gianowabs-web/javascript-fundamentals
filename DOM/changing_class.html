@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changing class</title>
+</head>
+<body>
+    <!--
+      changing class
+      -we use the "
+        a)classList.add()"
+         -To add a class to an element which did not have that class
+
+        b)ClassList.remove()
+         -To remove the class from an element
+
+    -->
+         <script>
+            function change(){
+                document.getElementById("shape").classList.remove("blue");
+            }
+         </script>
+         <style>
+            div{
+                height: 400px;
+                width: 400px;
+                background-color: red;
+            }
+            .square.blue{
+                background-color: green;
+            }
+        
+
+         </style>
+
+         <div id="shape" class="square blue">I am shape</div>
+         <button onclick="change()">SHIFT</button>
+</body>
+</html>

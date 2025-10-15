@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise10.7</title>
+</head>
+<body>
+    <!--
+    PRACTICAL EXERCICE10.7
+    Create a button within a basic HTML document and add the onclick Attribute. The example 
+    will demonstrate how you can reference object data with this:
+        1. Create a function to handle a click within your javascript code You can name the 
+         function message
+        2. Add this to the onclick function parameters sending the current element object 
+        data using this.
+        3. Add a second button to the page also invoking the same funsction on the click 
+        4. When the button is clicked you should see the name of the element that trigger 
+           the click in the console, like so:
+    
+    -->
+           <button onclick="reveal(this)">Button 1</button>
+           <button onclick="reveal(this)">Button 2</button>
+           <script>
+            function reveal(element){
+                console.log(element.innerText);
+            }     
+            
+           </script>
+</body>
+</html>

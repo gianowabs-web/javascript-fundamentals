@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANIPULATING ELEMENTS</title>
+</head>
+<body>
+    <!--
+    MANIPULATING ELEMENT
+
+    applies to it.
+    -this can be achieved using the style property
+        a) Select the right element from the DOM
+        b) cHANGE THE right property of the style property of this element
+
+    -example make a button that toggles the appearence of a line of text.
+    -to hide something using css we can set the display property of the element 
+    to "none"
+      display: none; to hide the content]
+      display:block; to show the content
+
+    -->
+
+    <p id="magic">I might appear aand disappear</p>
+    <button onclick="toggleDisplay()">Magic!</button>
+
+    <script>
+        function toggleDisplay(){
+            let p = document.getElementById("magic");
+            if(p.style.display=== "none"){
+
+                p.style.display= "block";
+            
+            }
+            else{
+                p.style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>

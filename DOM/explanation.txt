@@ -1,0 +1,44 @@
+DOM
+-IT STANDS FOR DOCUMENT OBJECT MODEL (DOM)
+-it 
+grabs an html page and turn it into logical tree
+
+html attributes
+DOM relies heavily on html attributes.
+html attributes is placed on the opening tag of the element.
+- common attributes names
+  id -gives an element a unique id // element.id
+  name - used to give a custom name to an element //let element =document.querySelector("output")
+  class- special meadata added to an element // <div class="output"></div>
+  value- sets the initial value of the element it is  added to // element.textcontent="tester"
+  style- 0 gives a specified layout to the html element it is added to.// element.style.
+  backgroundColor="red"
+
+
+BOM
+- in full is window browser object, it is the element that makes it possible for your javascript 
+code to communicate with the browser.
+
+1) window
+    The window object contains all the properties required to represent the window of the browser
+     example
+        size of the window 
+        history of previously visited web page
+    the exact implementation of the BOM depends on the browser and the version of the browser.
+    - important objects of the BOM
+         a) history
+         b) Navigator
+         c) Location
+
+DOM 
+
+selecting page elements
+-To select page element to use within your javasript code and in order to manipulate element
+ucan use either the 
+  a) querySelector
+  b) querySelectorAll()
+
+querySelector() 
+the document. querySelector() method will return the first element within the document that matches 
+the specified querySelector
+if no matching page element are found the result null is returned

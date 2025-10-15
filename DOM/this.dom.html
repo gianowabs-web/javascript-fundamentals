@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This DOM</title>
+</head>
+<body>
+    <!--
+    this
+    -refers to the element of the DOM  it belongs to.
+    -if we specify an onclick to send "this" in as an argument
+    it will send in the element and from this element we can transverse the DOM 
+    -The featurees can allow us to get the value of an input box.
+    if you send "this" you can read and modify the properties of the element 
+    that triggered the function
+    -->
+
+    <button onclick="reveal(this)">Click here!</button>
+
+    <script>
+        function reveal(parameter){
+            // alert (parameter)
+            console.log(parameter);
+
+            // retreve the parent
+            console.log(parameter.parentElement);
+
+            // we can also display rthe inner text using between
+            //the opening and closing tags-"innerText"
+            console.log(parameter.innerText);
+        }
+    </script>
+</body>
+</html>
