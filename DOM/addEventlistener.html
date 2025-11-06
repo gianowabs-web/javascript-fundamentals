@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <!--
+    Events are things that happen on a web page, like clicking on something, moving the mouse over
+    an element changing an element and there are many more. we have seen how to add an onclick event handler
+    already.
+    there is a way to register event handlers using javascript as well we call this events listeners using 
+    using event listeners we can add multiple event to one element this way javascript is constantly checking 
+    or listening for certain events to the elements on the page adding event listeners is a two step process
+            1. Select the element you want to add an event listener to.
+            2. use the addEventListener("event", function)syntax to add the event
+    Even if it is two step it can be done in one line of code:
+
+    document.getElementById("square").addEventListener("click", changeColor);
+
+    this is getting the element with the id square and adding the changeColor function as the event 
+    for whenever it gets clicked.
+    N/B:when we use event listner we remove the prefix from the event type For exmple click here reference
+    the same type as onclick but we have removed the on prefix.
+    another common one is when the page is done loading with onload;
+
+           window.onload= function (){
+           // whatever needs to happen after loading
+           // for example adding event listeners to elements
+           }
+
+    -->
+           <div id="square" style="width: 100px; height: 100px; background-color: grey;">change color</div>
+           <script>
+            window.onload = function (){
+                document.getElementById("square").addEventListener("click", changeColor);
+            }
+            function changeColor(){
+                let red = Math.floor(Math.random()*256);
+                let green = Math.floor(Math.random()*256);
+                let blue = Math.floor(Math.random()*256);
+                this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            }
+           </script>
+</body>
+</html>

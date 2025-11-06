@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete javascript course</title>
+</head>
+<body>
+    <!--
+    TAKE THIS STEPS
+    1. select the page elements as Javascript objects
+    2. Add an onclick event listener to the add button. once the button is clicked 
+    it should add the contents of the input field to the end of te list. you can call 
+    the function addOne().
+    3.Within addOne () create li elements to append to the main list on te page. Add the input 
+    value to the list item textContent.
+    4. Within the adOne()function get the current value of the addItem inputfield. use that value 
+    to create a textNode with that value, adding  it to the list item. Append the Textnode to the list item.
+
+    -->
+    <div id="message">Complete Javascript course</div>
+    <div>
+        <input type="text" id="addItem">
+        <input type="button" id="addNew" onclick="addOne()" value="Add to list">
+    </div>
+    <div id="output">
+        <h1>Shopping List</h1>
+        <ol id="sList"> </ol>
+
+    </div>
+    <script>
+        //  select the page elements as Javascript objects
+        let addItem = document.getElementById("addItem");
+        //console.log(addItem);
+        let addNew =document.getElementById("addNew");
+        //console.log(addNew);
+        let output = document.getElementById("output");
+        //console.log(output);
+        let list =document.getElementById("sList");
+       // console.log(list);
+
+        /*
+        2. Add an onclick event listener to the add button. once the button is clicked 
+        it should add the contents of the input field to the end of te list. you can call 
+        the function addOne().
+        
+        */
+       addNew.onload = function (){
+        addNew.addEventListener("click", addOne);
+       }
+
+       /*
+        3.Within addOne () create li elements to append to the main list on te page. Add the input 
+          value to the list item textContent.
+       */
+      function addOne(){
+        let items = document.createElement("li");
+        items.textContent =addItem.value;
+        document.body.appendChild(items);
+      }
+    </script>
+
+</body>
+</html>
