@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    this is not hard as it may seem the folloewing javascript does just that 
+      let el = document.createElement("p");
+      el.innerText =Math.floor(Math.random()*100);
+      document.body.appendChild(el);
+    it creates an element of the type p(paragraph). this is a createElement() function 
+    that is on the document object. upon creation, you will need to specify what type of HTML
+    element you would want to create,
+    <p>innertext here</p>
+    You could add it to another element just select the element you want to add it to and use the appendChild(
+    ) method.
+    -->
+    <button onclick="addRandomNumber()">Add a number</button>
+    <script>
+        function addRandomNumber(){
+            let el =document.createElement("p");
+            el.innerText=Math.floor(Math.random()*100);
+            document.body.appendChild(el);
+        }
+
+    </script>
+</body>
+</html>
