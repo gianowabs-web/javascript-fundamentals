@@ -1,0 +1,72 @@
+interactive content and event listeners
+• Interactive content
+• Specifying events
+• The onload event handler
+• The mouse event handler
+• The event target property
+• DOM event flow
+• onchange and onblur
+• The key event handler
+• Drag and drop elements
+• Form submission
+• Animating elements
+
+
+ interactive content
+Interactive content is content that responds to the actions of a user. Think, for 
+example, of a web app in which you can create postcards dynamically, or play a 
+game on a website in a web browser. 
+This interactive content is made possible by changing the DOM based on user 
+interactions. These interactions could be anything: entering text in an input field, 
+clicking somewhere on the page, hovering over a certain element with the mouse, or 
+a certain input with the keyboard. All these are called events. We have seen events 
+already. But there is actually more to it!
+
+
+Specifying events
+There are three ways to specify events. We have seen each of these in the previous 
+chapter, but let's run through them again now. One is HTML-based and the other 
+two are JavaScript-based. For this example, we are going to use the click event as 
+an example.
+
+
+Specifying events with HTML
+First, the HTML way:
+<p id="unique" onclick="magic()">Click here for magic!</p>
+The great thing about specifying events this way is that it's quite easy to read this 
+code and predict what it is going to do. As soon as you click on the paragraph, the 
+function magic() will be triggered. There are some downsides too: you can only 
+specify one event this way, and you cannot change the event dynamically either
+
+
+Here is the first way to do it using JavaScript.
+document.getElementById("unique").onclick = function() { magic(); };
+
+
+Specifying events with event listeners
+The last method is using the addEventListener() method to add an event to an 
+element. With this, we can specify multiple functions for the same event,
+ for example:
+     when an element gets clicked.
+If we wanted to specify event triggers for all the elements of the 
+page, we could do so in a loop for a cleaner coding style.
+
+What is striking for both methods we have looked at—using HTML events and 
+assigning to properties—is that the event gets prefixed with on. For example, 
+onclick, onload, onfocus, onblur, onchange, etc. This is not the case when we use 
+the addEventListener() method, where we specify the event type within the event 
+listener without the on prefix, as here, with an alternative to onclick:
+
+
+document.getElementById("unique").addEventListener("click", magic);
+
+Please note that we are leaving out the parentheses behind the magic function here. 
+We cannot send in parameters like this. If that is something you have to do, you'd 
+have to wrap the functionality in an anonymous function, like this:
+
+document.getElementById("unique").addEventListener("click", function() 
+{ magic(arg1, arg2) });
+
+In this chapter, we may use any of these ways to specify an event. We will mostly 
+be using one of the JavaScript options, though.
+

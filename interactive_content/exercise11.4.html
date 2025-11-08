@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac exercise11.4</title>
+</head>
+<body>
+    <!--
+    1. Create a blank element on the page and assign a class to it.
+    2. Select the element using its class name.
+    3. Assign a variable to the element object from the page.
+    4. Update the content of the element to say hello world.
+    5. Using the style properties of the element, update the height and width, then 
+    add a default background color to it.
+    6. Create a function to handle two arguments, the first being a color value as a 
+    string and the second being the event object of the trigger. 
+    7. In the function, output the color value to the console, and for the event, 
+    output the event type to the console.
+    8. Add event listeners to the element: mousedown, mouseover, mouseout, and 
+    mouseup. For each of these events, send two arguments to the function that 
+    you created: a color value and the event object.
+    9. Run the code and try it in your browser
+    -->
+
+    <div class="box"></div>
+    <script>
+        //2. Select the element using its class name.
+        document.querySelectors(".box");
+        
+        // 3. Assign a variable to the element object from the page.
+        let el=document.querySelectors(".box");
+
+        // 4. Update the content of the element to say hello world.
+
+        el.textContent="hello world";
+
+        // 5. Using the style properties of the element, update the height and width, then 
+        //add a default background color to it.
+        el.style.backgroundColor="aqua";
+
+        /*
+        8. Add event listeners to the element: mousedown, mouseover, mouseout, and 
+        mouseup. For each of these events, send two arguments to the function that 
+        you created: a color value and the event object.
+        */
+        el.addEventListener("mousedown", function(){handler(this, "blue");})
+        el.addEventListener("mouseover", function(){handler(this, "green");})
+        el.addEventListener("mouseout", function(){handler(this, "red");})
+        el.addEventListener("mouseup", function(){handler(this, "black");})
+
+        // 6. Create a function to handle two arguments, the first being a color value as a 
+       //string and the second being the event object of the trigger. 
+       function handler (el, color){
+            el.backgroundColor=color;
+            /*
+            7. In the function, output the color value to the console, and for the event, 
+            output the event type to the console.
+            */
+            console.log(el.backgroundColor);
+
+       }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse event handler</title>
+</head>
+<body>
+    <!--
+    there are diffrent mouse event handlers.Mouse events are actions on the mouse 
+    these are the ones we have:
+          ondblclick - when the mouse is double-clicked.
+          onmousedown - when the mouse clicks on tp of an element without the click
+          being released.
+          onmouseup - when the mouse clicks on top of an element is released.
+          onmouseEnter - when the mouse moves onto an element.
+          onmouseleave -when the mouse an element and all of its children
+          onmousemove - when the mouse moves over an element
+          onmouseout - when the mouse leaves an individual element
+          onmouseover - when the mouse hovers over an element.
+    -->
+          <div id="divvy" onmouseout="changeColor()" style="width: 100px; 
+        height: 100px; background-color: pink;">
+        
+ <script>
+     function changeColor() {
+        document.getElementById("divvy").style.backgroundColor = "blue";
+    }
+ </script>
+</body>
+</html>

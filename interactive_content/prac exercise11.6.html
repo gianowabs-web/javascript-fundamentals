@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac Exercise 11.6</title>
+    <style>
+    .box {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black
+    }
+    </style>
+</head>
+<body>
+    <!--
+    1. In the JavaScript code, select all the elements with the classes, and separately 
+    select the main container element.
+    2. Add event listeners to the main container, outputting to the console value 
+    of 4 for the useCapture argument set to false, and 1 for the useCapture
+    argument set to true.
+    3. For each of the nested elements, add click event listeners with a console.
+    log() value of 3 for the useCapture argument set to false, and 2 for 
+    useCapture set to true.
+    4. Click the page elements to see the event delegation and order of output on 
+    the page.
+    5. Within the box elements on both click events, add to the console an output 
+    for the event target's textContent value.
+
+    -->
+
+    <div class="container" onclick="color()">
+        <div class="box" id="box0">Box #1</div>
+        <br>
+        <div class="box" id="box1">Box #2</div>
+        <br>
+        <div class="box" id="box2">Box #3</div>
+        <br>
+        <div class="box" id="box3">Box #4</div>
+    </div>
+   <script>
+    //1. In the JavaScript code, select all the elements with the classes, and separately 
+   // select the main container element.
+    let box = document.querySelectorAll(".box");
+      //console.log(box);
+    let container =document.querySelector(".container");
+      //console.log(container);
+
+      /*
+       2. Add event listeners to the main container, outputting to the console value 
+         of 4 for the useCapture argument set to false, and 1 for the useCapture
+         argument set to true.
+      */
+    container.addEventListener("click", function(){color(this, "cyan");});
+    function color(element=true, color=false){
+        element.style.backgroundColor=color;
+        console.log(color);
+        
+    }
+    
+    /*
+    3. For each of the nested elements, add click event listeners with a console.
+       log() value of 3 for the useCapture argument set to false, and 2 for 
+       useCapture set to true.
+
+    */
+    document.getElementById("box0").addEventListener("click", function(){color(this, "green");})
+    document.getElementById("box1").addEventListener("click", function(){color(this, "yellow");})
+    document.getElementById("box2").addEventListener("click", function(){color(this, "black");})
+    document.getElementById("box3").addEventListener("click", function(){color(this, "red");})
+
+    //  4. Click the page elements to see the event delegation and order of output on 
+     // the page.
+
+    // 5. Within the box elements on both click events, add to the console an output 
+   // for the event target's textContent value.
+
+
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The event target property</title>
+</head>
+<body>
+    <!--
+    Whenever an event gets fired, an event variable becomes available. It has many 
+    properties, and you can check it out by using this command in the function that 
+    gets fired for the event:
+               console.dir(event);
+               
+               
+    This will show many properties. One of the most interesting properties for now is the 
+    target property. The target is the HTML element that fired the event. So, we can use 
+    it to get information from a web page. Let's look at a simple example.
+
+
+    <button type="button" onclick="triggerSomething()">Click</button>
+    <script>
+    function triggerSomething() {
+        console.dir(event.target);
+    }
+    </script
+
+
+    In this case, event.target is the button element. In the console, the button element 
+    and all its properties will be logged, including potential siblings and parents.
+
+    -->
+
+    <div id="welcome">Hi there!</div>
+    <form>
+      <input type="text" name="firstname" placeholder="First name" />
+      <input type="text" name="lastname" placeholder="Last name" />
+      <input type="button" onclick="sendInfo()" value="Submit" />
+    </form>
+    <script>
+     function sendInfo() {
+        let p = event.target.parentElement;
+        message("Welcome " + p.firstname.value + " " + p.lastname.
+        value);
+    }
+     function message(m) {
+        document.getElementById("welcome").innerHTML = m;
+    }
+    </script>
+
+</body>
+</html>
