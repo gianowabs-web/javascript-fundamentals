@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive voting system</title>
+</head>
+<body>
+    <!--
+    1.create an array of people's names called myArray.this will
+    be the default of original list of names.
+    2. select the page element as javascript object so they can 
+    be selectd within the code.
+    3.Add event listener to the add friend button once cliced this will get 
+    the value from the input field and pass the values toa function that will
+    add the friend list to the page.Additionally add new friends name into the 
+    people's array you created get the current value in the input field and 
+    push that value into the array so the array matches the values on the page 
+    4. Run a function to build the content on thepage using the forEach()loop
+    get all the items within the array and add them to the page include zero 
+    as default for the vote count as all individuals should start on zero votes.
+    5.Create a main function that will create a page elements starting with the
+    parent table row ,tr then create 3 tabl cells td elements add content to the
+     table cells including the vote count in the last column the person name in
+     the middle and the index plus 1 in the first column.
+    6. Append the table cells to the table row and apend the table row to the 
+    output area on the page.
+    7. Add event listener that will increase the vote counter for when the user clicks.
+    8.Get the text content from the last column in the row. it should be the value 
+    of the current counter. increment the counter by one and make sure the datatype 
+    is a number so you can add to it.
+    9.update the last column with the new click counter.
+    -->
+    <div id="message">Complete javascript course</div>
+    <div>
+        <input type="text" id="addFriend">
+        <input type="button" id="addNew" onclick="list()" value="add Friend">
+    </div>
+    <table id="output">Table</table>
+    <script>
+        let myArray=["Bravo", "Petrancko", "Sulvana", "Miller", "Halland"];
+        let message = document.getElementById("message");
+        console.log(message);
+        let addFriend=document.getElementById("addFriend");
+        console.log(addFriend);
+        let add = document.getElementById("addNew");
+        console.log(add);
+        let table = document.getElementById("output");
+        console.log(table);
+
+        add.addEventListener("click", list);
+       
+        
+        function list(){
+           
+            myArray.push(addFriend.value);
+            let html = `<html> <table border="1"><tr><th>Name</th><th>Votes</th></tr>`;
+            for(let i = 0;i <= myArray.length; i++){
+                html +=`<tr data-row=${i} dataname= ${myArray}>
+                    <td>${myArray[i]}</td> <td>${i+ Math.floor(Math.random()*100)}</td></tr>`;
+                }
+
+            table.innerHTML=`${html}</table>`;      
+        }
+       
+
+    </script>
+</body>
+</html>
