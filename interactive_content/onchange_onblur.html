@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange and onblur</title>
+</head>
+<body>
+    <!--
+    Two other events that are often combined with input boxes
+    are ochange and onblur. onchange gets triggered when  an 
+    element changes for exemple when the value for an input box
+    changes onblur gets triggered when an object gets out of focus 
+    for example:
+             when you have a cursor in one input box and the cursor 
+             goes to another input box the onblur event of the first 
+             input box will get triggered.
+    -->
+         <div id="welcome">Hi there!</div>  
+         <form>
+            <input type="text" name="firstname" placeholder="First Name"
+            onchange="logEvent()" />
+            <input type="text" name="lastname" placeholder="Last Name"
+            onchange="logEvent()" />
+            <input type="button" onclick="sendInfo()" value="Submit" />
+         </form> 
+         <script>
+            function logEvent(){
+                let p = event.target;
+                if(p.name == "firstname"){
+                    message("First Name Changed to " +p.value);
+                }
+                else{
+                    message("Last Name Changed to " +p.value);
+                };
+            }
+            function sendInfo(){
+                let p = event.target.parentElement;
+                message("welcome " + p.firstname.value + " " + p.lastname.value);
+            }
+            function message(m){
+                document.getElementById("welcome").innerHTML=m;
+            }
+         </script> 
+</body>
+</html>

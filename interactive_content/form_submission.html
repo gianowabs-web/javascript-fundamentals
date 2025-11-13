@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form submission</title>
+</head>
+<body>
+    <!--
+     When a form gets submitted, an event can be triggered. This can be achieved in 
+     different ways, and one of them is to add to the form element the onsubmit attribute.
+          <form onsubmit="doSomething()">
+    The function that is listed there will get triggered whenever input of type submit is 
+    submitted.
+          <input type="submit" value="send">
+    We can do more with the HTML of the form element; for example, we can redirect to 
+    another page. We have to specify the way we want to send the form values using the 
+    method attribute and the location page using the action attribute.
+         <form action="anotherpage.html" method="get" onsubmit="doStuff()">
+    Don't worry about the get for now; this just means that values get sent via the URL. 
+    URLs look like this when you use get:
+    www.example.com/anotherpage.html?name=edward
+    After the question mark, the variables that are sent along are shown in key-value 
+    pairs. This is the form that created the URL when edward was inserted for name.
+    -->
+    <div id="wrapper"></div>
+    <form action="anotherpage.html" method="get" onsubmit="return 
+    valform()">
+    <input type="text" id="firstName"  name="firstname"
+    placeholder="First Name" />
+    <input type="text" id="lastName"  name="lastname"
+    placeholder="Last Name" />
+    <input type="text" id="age" name="age" placeholder="Age" />
+    <input type="submit" value="submit" />
+    </form>
+    <script>
+        function valform(){
+            var p = event.target.children;
+            if(p.firstName.value ==""){
+                message("need a first name!!");
+                console.log(false);
+            }
+            if(p.lastName.value == ""){
+                message("Need a last name!!");
+                console.log(false);
+            }
+            if(p.age.value==""){
+                message("Need an age!!");
+                console.log(false);
+            }
+            console.log(true);
+        }
+        function message(m){
+            document.getElementById("wrapper").innerHTML=m;
+        }
+    </script>
+</body>
+</html>

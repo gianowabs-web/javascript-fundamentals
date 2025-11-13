@@ -52,7 +52,7 @@
          argument set to true.
       */
     container.addEventListener("click", function(){color(this, "cyan");});
-    function color(element=true, color=false){
+    function color(element, color){
         element.style.backgroundColor=color;
         console.log(color);
         
